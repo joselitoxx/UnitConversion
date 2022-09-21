@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+<style>
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 1280px) {
+
+body{
+margin: 0;
+padding: 0;
+background: url(fondo1.jpg);
+background-size: cover;
+
+
+
+}
+
+
+  .dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+
+  }
+
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+  }
+
+  .inputs {
+    box-sizing: border-box;
+    background-image: url('search.png');
+    background :
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border: 2px solid #000000;
+    margin-bottom: 4px
+
+  }
+
+.inputs:focus {outline: 3px solid #ddd;}
+
+
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+
+    min-width: 150px;
+    overflow: auto;
+
+    z-index: 0;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  	margin-bottom:3px;
+  }
+
+  .dropdown a:hover {background-color: #ddd;}
+
+  .dropdown1 {
+
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown1-content {
+    display: none;
+   position: absolute;
+   left: 160px;
+
+    width: 150px;
+    overflow: none;
+
+    z-index: 2;
+
+
+
+  }
+
+  .dropdown1-content a {
+    color: #FFFFF0;
+    padding: 17px 20px;
+    text-decoration: none;
+    display: block;
+    margin-bottom:4px;
+
+
+  }
+
+  .dropdown1 a:hover {background-color: #ddd;}
+
+  .dropdown2 {
+
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown2-content {
+    display: none;
+   position: absolute;
+   left: 320px;
+
+    width: 150px;
+    overflow: none;
+
+    z-index: 3;
+
+
+
+  }
+
+  .dropdown2-content a {
+    color: #FFFFF0;
+    padding: 17px 20px;
+    text-decoration: none;
+    display: block;
+    margin-bottom:4px;
+
+
+  }
+
+  .dropdown1 a:hover {background-color: #ddd;}
+
+
+
+
+  .show {display: block;}
+
+
+  .button-55 {
+    align-self: center;
+    background-color: #fff;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: #41403e;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Neucha, sans-serif;
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    padding: .75rem;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+  }
+
+  .button-55:hover {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
+  }
+
+  .button-55:focus {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+  }
+
+  .button-85 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background: #F8F8FF;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 50px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .button-85:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 6px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+  .button-85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+ .button-55.in {
+
+    padding-top: 5px;
+    padding-right: 55px;
+    padding-bottom: 5px;
+    padding-left: 55px;
+    margin-bottom:3px;
+    margin-bottom:3px;
+}
+
+.liears{
+  border-top: 5px solid black;
+  max-width: 155px;
+
+  padding: 0;
+  margin-bottom:3px;
+
+}
+
+.liears.opa{
+  border-top: 5px solid black;
+  max-width: 155px;
+
+  padding-bottom: 50;
+  margin-bottom:3px;
+
+}
+
+
+.hit-the-floor {
+  color: #F5FFFA;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: Helvetica;
+  text-shadow:
+    0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+
+.hit-the-floor.centrar{
+opacity: 1;
+
+padding-top: ´20px;
+padding-bottom: 0px;
+height: 5px;
+}
+.hit-the-floor.centrar.opa{
+opacity: 0;
+}
+
+.col.button-85{
+opacity: 1;
+
+
+}
+
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+
+
+html {
+     font-size: 300%;
+   }
+
+  body{
+  margin: 0;
+  padding: 0;
+  background: url(fondo1.jpg);
+  background-size: cover;
+
+  }
+
+
+    .dropbtn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+
+    }
+
+    .dropbtn:hover, .dropbtn:focus {
+      background-color: #3e8e41;
+    }
+
+    .inputs {
+      box-sizing: border-box;
+      background-image: none;
+
+      background-repeat: no-repeat;
+      width: 160px;
+      height: 50px;
+
+      padding: 14px 20px 12px 45px;
+      border: none;
+      border: 2px solid #000000;
+      margin-bottom: 4px;
+      font-size:3vw;
+    }
+
+  .inputs:focus {outline: 5px solid #ddd;}
+
+  .inputs.ar{
+    width: 300px;
+    height: 80px;
+
+    font-size:5vw;
+  }
+
+
+.btn.btn-dark.btn-lg{
+
+  width: 200px;
+  height: 80px;
+  padding: 5px 20px 12px 10px;
+  font-size:5vw
+}
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+
+      min-width: 100px;
+      overflow: auto;
+
+      z-index: 0;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    	margin-bottom:3px;
+      min-width: 50px;
+      font-size:4vw;
+    }
+
+    .dropdown a:hover {background-color: #ddd;}
+
+    .dropdown1 {
+
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown1-content {
+      display: none;
+     position: absolute;
+      left: 100px;
+      width: 100px;
+      overflow: none;
+      font-size:3vw;
+      z-index: 2;
+
+
+
+    }
+
+    .dropdown1-content a {
+      color: #FFFFF0;
+      padding: 17px 20px;
+      text-decoration: none;
+      display: block;
+      margin-bottom:4px;
+      font-size:3vw;
+
+    }
+
+    .dropdown1 a:hover {background-color: #ddd;}
+
+    .dropdown2 {
+
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown2-content {
+      display: none;
+     position: absolute;
+      left: 320px;
+
+      width: 150px;
+      overflow: none;
+
+      z-index: 3;
+
+
+
+    }
+
+    .dropdown2-content a {
+      color: #FFFFF0;
+      padding: 17px 20px;
+      text-decoration: none;
+      display: block;
+      margin-bottom:4px;
+
+
+    }
+
+    .dropdown1 a:hover {background-color: #ddd;}
+
+
+
+
+    .show {display: block;}
+
+
+    .button-55 {
+      align-self: center;
+      background-color: #fff;
+      background-image: none;
+      background-position: 0 90%;
+      background-repeat: repeat no-repeat;
+      background-size: 4px 3px;
+      border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+      border-style: solid;
+      border-width: 2px;
+      box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+      box-sizing: border-box;
+      color: #41403e;
+      cursor: pointer;
+      display: inline-block;
+      font-family: Neucha, sans-serif;
+      font-size:3vw;
+      line-height: 23px;
+      outline: none;
+
+      text-decoration: none;
+      transition: all 235ms ease-in-out;
+      border-bottom-left-radius: 15px 255px;
+      border-bottom-right-radius: 225px 15px;
+      border-top-left-radius: 255px 15px;
+      border-top-right-radius: 15px 225px;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      padding-top: 0;
+      padding-bottom: 10px ;
+      width: 160px;
+      height: 80px;
+
+    }
+
+
+    .button-55:hover {
+      box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+      transform: translate3d(0, 2px, 0);
+      font-size:3vw;
+
+    }
+
+    .button-55:focus {
+      box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+      font-size:3vw;
+
+    }
+
+    .button-85 {
+      padding-top: 0;
+      padding-bottom: 10px ;
+      width: 160px;
+      height: 80px;
+      border: none;
+      outline: none;
+      color: rgb(0, 0, 0);
+      background: #F8F8FF;
+      cursor: pointer;
+      position: relative;
+      z-index: 3;
+      border-radius: 50px;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      font-size:3vw;
+    }
+
+    .button-85:before {
+      content: "";
+      background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+      );
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 200%;
+      z-index: -1;
+      filter: blur(5px);
+      -webkit-filter: blur(5px);
+      width: 100px;
+      height: 50px;
+      animation: glowing-button-85 20s linear infinite;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+    }
+
+    @keyframes glowing-button-85 {
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 400% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+    .button-85:after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #222;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
+
+   .button-55.in {
+
+      padding-top: 5px;
+      padding-right: 10px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      margin-bottom:3px;
+      margin-bottom:3px;
+      font-size:3vw;
+  }
+
+  .liears{
+    border-top: 5px solid black;
+    max-width: 150px;
+
+    padding: 0;
+    margin-bottom:3px;
+
+  }
+
+  .liears.opa{
+    border-top: 5px solid black;
+    max-width: 155px;
+
+    padding-bottom: 50;
+    margin-bottom:3px;
+
+  }
+
+
+  .hit-the-floor {
+    color: #F5FFFA;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Helvetica;
+    text-shadow:
+      0 1px 0 #ccc,
+      0 2px 0 #c9c9c9,
+      0 3px 0 #bbb,
+      0 4px 0 #b9b9b9,
+      0 5px 0 #aaa,
+      0 6px 1px rgba(0,0,0,.1),
+      0 0 5px rgba(0,0,0,.1),
+      0 1px 3px rgba(0,0,0,.3),
+      0 3px 5px rgba(0,0,0,.2),
+      0 5px 10px rgba(0,0,0,.25),
+      0 10px 10px rgba(0,0,0,.2),
+      0 20px 20px rgba(0,0,0,.15);
+  }
+
+
+  .hit-the-floor.centrar{
+  opacity: 1;
+
+  padding-top: ´20px;
+  padding-bottom: 0px;
+  height: 5px;
+
+  }
+  .hit-the-floor.centrar.opa{
+  opacity: 0;
+  }
+
+  .col.button-85{
+  opacity: 1;
+
+
+  }
+
+
+
+
+
+
+
+
+
+  </style>
+
+
+</head>
+
+
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p>converion de unudades </p>
+<div class="row row-cols-3">
+  <div class="col">
+
+<input id="demo4" class = "inputs ar" type="text" value="0">
+
+</div>
+
+<div class="col" id = "nox" style="display: none">
+
+  <div class="dropdown1">
+
+       <button onclick="myFunction(1);" class="button-55 in " id ="bots1" >select</button>
+       <div id="myDropdown1" class="dropdown-content"  style="z-index:2" >
+       <input type="text" placeholder="Search.." id="myInput1" class = "inputs" onkeyup="filterFunction('myInput1','myDropdown1')">
+       <a class="button-55 in " href="#about" onclick="showDrop('myDropdown2');crearuwu(0,'2',true,1);">Masa</a>
+       <a class="button-55 in " href="#boton" onclick="showDrop('myDropdown2');crearuwu(1,'2',true,1);" >mol</a>
+       <a class="button-55 in " href="#blog" onclick="showDrop('myDropdown2');crearuwu(2,'2',true,1);">Longitud</a>
+       <a class="button-55 in " href="#contact" onclick="showDrop('myDropdown2');crearuwu(3,'2',true,1);">Volumen</a>
+       <a class="button-55 in " href="#custom" onclick="showDrop('myDropdown2');crearuwu(4,'2',true,1);">Presion</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown2');crearuwu(5,'2',true,1);">TemperaturaIntervalo</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown2');crearuwu(6,'2',true,1);">ViscosidaDinamica</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown2');crearuwu(7,'2',true,1);">ViscosidadCinematica</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown2');crearuwu(8,'2',true,1);">FUERZAS</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown2');crearuwu(9,'2',true,1);">Fuerzas2</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown2');crearuwu(10,'2',true,1);">Energia</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown2');crearuwu(11,'2',true,1);">Energia2</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown2');crearuwu(12,'2',true,1);">Potencia</a>
+
+
+       </div>
+
+       <div id="myDropdown2" class="dropdown2-content" style="left : 160px" >
+
+       </div>
+
+       <div id="myDropdown3" class="dropdown2-content" style="left : 320px" >
+
+       </div>
+       </div>
+       <div class = liears> </div>
+       <div class="dropdown1">
+
+       <button onclick="myFunction(4);" class="button-55 in " id ="bots2" >select</button>
+       <div id="myDropdown4" class="dropdown-content">
+        <input type="text" placeholder="Search.." id="myInput4" class = "inputs" onkeyup="filterFunction('myInput4','myDropdown4')">
+        <a class="button-55 in " href="#support" onclick="showDrop('myDropdown5');crearuwu(0,'5',false,2);">Masa</a>
+        <a class="button-55 in " href="#support" onclick="showDrop('myDropdown5');crearuwu(1,'5',false,2);" >mol</a>
+        <a class="button-55 in " href="#support" onclick="showDrop('myDropdown5');crearuwu(2,'5',false,2);">Longitud</a>
+        <a class="button-55 in " href="#support" onclick="showDrop('myDropdown5');crearuwu(3,'5',false,2);">Volumen</a>
+        <a class="button-55 in " href="#support" onclick="showDrop('myDropdown5');crearuwu(4,'5',false,2);">Presion</a>
+        <a class="button-55 in " href="#support" onclick="showDrop('myDropdown5');crearuwu(5,'5',false,2);">TemperaturaIntervalo</a>
+        <a class="button-55 in " href="#support" onclick="showDrop('myDropdown5');crearuwu(6,'5',false,2);">ViscosidaDinamica</a>
+        <a class="button-55 in " href="#support" onclick="showDrop('myDropdown5');crearuwu(7,'5',false,2);">ViscosidadCinematica</a>
+        <a class="button-55 in " href="#support" onclick="showDrop('myDropdown5');crearuwu(8,'5',false,2);">FUERZAS</a>
+        <a class="button-55 in " href="#support" onclick="showDrop('myDropdown5');crearuwu(9,'5',false,2);">Fuerzas2</a>
+        <a class="button-55 in " href="#support" onclick="showDrop('myDropdown5');crearuwu(10,'5',false,2);">Energia</a>
+        <a class="button-55 in " href="#support" onclick="showDrop('myDropdown5');crearuwu(11,'5',false,2);">Energia2</a>
+        <a class="button-55 in " href="#support" onclick="showDrop('myDropdown5');crearuwu(12,'5',false,2);">Potencia</a>
+
+       </div>
+
+       <div id="myDropdown5" class="dropdown2-content" style="left : 160px" >
+
+       </div>
+
+       <div id="myDropdown6" class="dropdown2-content" style="left : 320px" >
+
+       </div>
+       </div>
+
+  </div>
+
+<div class="col " id = "nox1" style="display: none" >
+
+  <div class="dropdown1">
+
+  <button onclick="myFunction(7);" class="button-55 in " id ="bots7" >select</button>
+  <div id="myDropdown7" class="dropdown-content"  style="z-index:2" >
+  <input type="text" placeholder="Search.." id="myInput7" class = "inputs" onkeyup="filterFunction('myInput7','myDropdown7')">
+  <a class="button-55 in " href="#about" onclick="showDrop('myDropdown8');crearuwu(0,'8',true,7);" >Masa</a>
+  <a class="button-55 in " href="#boton" onclick="showDrop('myDropdown8');crearuwu(1,'8',true,7);" >mol</a>
+  <a class="button-55 in " href="#blog" onclick="showDrop('myDropdown8');crearuwu(2,'8',true,7);">Longitud</a>
+  <a class="button-55 in " href="#contact" onclick="showDrop('myDropdown8');crearuwu(3,'8',true,7);">Volumen</a>
+  <a class="button-55 in " href="#custom" onclick="showDrop('myDropdown8');crearuwu(4,'8',true,7);">Presion</a>
+  <a class="button-55 in " href="#support" onclick="showDrop('myDropdown8');crearuwu(5,'8',true,7);">TemperaturaIntervalo</a>
+  <a class="button-55 in " href="#support" onclick="showDrop('myDropdown8');crearuwu(6,'8',true,7);">ViscosidaDinamica</a>
+  <a class="button-55 in " href="#support" onclick="showDrop('myDropdown8');crearuwu(7,'8',true,7);">ViscosidadCinematica</a>
+  <a class="button-55 in " href="#support" onclick="showDrop('myDropdown8');crearuwu(8,'8',true,7);">FUERZAS</a>
+  <a class="button-55 in " href="#support" onclick="showDrop('myDropdown8');crearuwu(9,'8',true,7);">Fuerzas2</a>
+  <a class="button-55 in " href="#support" onclick="showDrop('myDropdown8');crearuwu(10,'8',true,7);">Energia</a>
+  <a class="button-55 in " href="#support" onclick="showDrop('myDropdown8');crearuwu(11,'8',true,7);">Energia2</a>
+  <a class="button-55 in " href="#support" onclick="showDrop('myDropdown8');crearuwu(12,'8',true,7);">Potencia</a>
+
+
+  </div>
+
+  <div id="myDropdown8" class="dropdown2-content" style="left : 160px" >
+
+  </div>
+
+  <div id="myDropdown9" class="dropdown2-content" style="left : 320px" >
+
+  </div>
+  </div>
+  <div class = liears> </div>
+  <div class="dropdown1">
+
+  <button onclick="myFunction(10);" class="button-55 in " id ="bots8" >select</button>
+  <div id="myDropdown10" class="dropdown-content">
+   <input type="text" placeholder="Search.." id="myInput4" class = "inputs" onkeyup="filterFunction('myInput10','myDropdown10')">
+   <a class="button-55 in " href="#support" onclick="showDrop('myDropdown11');crearuwu(0,'11',false,8);" >Masa</a>
+   <a class="button-55 in " href="#support" onclick="showDrop('myDropdown11');crearuwu(1,'11',false,8);" >mol</a>
+   <a class="button-55 in " href="#support" onclick="showDrop('myDropdown11');crearuwu(2,'11',false,8);">Longitud</a>
+   <a class="button-55 in " href="#support" onclick="showDrop('myDropdown11');crearuwu(3,'11',false,8);">Volumen</a>
+   <a class="button-55 in " href="#support" onclick="showDrop('myDropdown11');crearuwu(4,'11',false,8);">Presion</a>
+   <a class="button-55 in " href="#support" onclick="showDrop('myDropdown11');crearuwu(5,'11',false,8);">TemperaturaIntervalo</a>
+   <a class="button-55 in " href="#support" onclick="showDrop('myDropdown11');crearuwu(6,'11',false,8);">ViscosidaDinamica</a>
+   <a class="button-55 in " href="#support" onclick="showDrop('myDropdown11');crearuwu(7,'11',false,8);">ViscosidadCinematica</a>
+   <a class="button-55 in " href="#support" onclick="showDrop('myDropdown11');crearuwu(8,'11',false,8);">FUERZAS</a>
+   <a class="button-55 in " href="#support" onclick="showDrop('myDropdown11');crearuwu(9,'11',false,8);">Fuerzas2</a>
+   <a class="button-55 in " href="#support" onclick="showDrop('myDropdown11');crearuwu(10,'11',false,8);">Energia</a>
+   <a class="button-55 in " href="#support" onclick="showDrop('myDropdown11');crearuwu(11,'11',false,8);">Energia2</a>
+   <a class="button-55 in " href="#support" onclick="showDrop('myDropdown11');crearuwu(12,'11',false,8);">Potencia</a>
+
+  </div>
+
+  <div id="myDropdown11" class="dropdown2-content" style="left : 160px" >
+
+  </div>
+
+  <div id="myDropdown12" class="dropdown2-content" style="left : 320px" >
+
+  </div>
+  </div>
+
+</div>
+
+<div class="col " id = "nox2" style="display: none" >
+
+    <div class="dropdown1">
+
+    <button onclick="myFunction(13);" class="button-55 in " id ="bots13" >select</button>
+    <div id="myDropdown13" class="dropdown-content"  style="z-index:2" >
+    <input type="text" placeholder="Search.." id="myInput13" class = "inputs" onkeyup="filterFunction('myInput13','myDropdown13')">
+    <a class="button-55 in " href="#about" onclick="showDrop('myDropdown14');crearuwu(0,'14',true,13);" >Masa</a>
+    <a class="button-55 in " href="#boton" onclick="showDrop('myDropdown14');crearuwu(1,'14',true,13);" >mol</a>
+    <a class="button-55 in " href="#blog" onclick="showDrop('myDropdown14');crearuwu(2,'14',true,13);">Longitud</a>
+    <a class="button-55 in " href="#contact" onclick="showDrop('myDropdown14');crearuwu(3,'14',true,13);">Volumen</a>
+    <a class="button-55 in " href="#custom" onclick="showDrop('myDropdown14');crearuwu(4,'14',true,13);">Presion</a>
+    <a class="button-55 in " href="#support" onclick="showDrop('myDropdown14');crearuwu(5,'14',true,13);">TemperaturaIntervalo</a>
+    <a class="button-55 in " href="#support" onclick="showDrop('myDropdown14');crearuwu(6,'14',true,13);">ViscosidaDinamica</a>
+    <a class="button-55 in " href="#support" onclick="showDrop('myDropdown14');crearuwu(7,'14',true,13);">ViscosidadCinematica</a>
+    <a class="button-55 in " href="#support" onclick="showDrop('myDropdown14');crearuwu(8,'14',true,13);">FUERZAS</a>
+    <a class="button-55 in " href="#support" onclick="showDrop('myDropdown14');crearuwu(9,'14',true,13);">Fuerzas2</a>
+    <a class="button-55 in " href="#support" onclick="showDrop('myDropdown14');crearuwu(10,'14',true,13);">Energia</a>
+    <a class="button-55 in " href="#support" onclick="showDrop('myDropdown14');crearuwu(11,'14',true,13);">Energia2</a>
+    <a class="button-55 in " href="#support" onclick="showDrop('myDropdown14');crearuwu(12,'14',true,13);">Potencia</a>
+
+
+    </div>
+
+    <div id="myDropdown14" class="dropdown2-content" style="left : 160px" >
+
+    </div>
+
+    <div id="myDropdown15" class="dropdown2-content" style="left : 320px" >
+
+    </div>
+    </div>
+    <div class = liears> </div>
+    <div class="dropdown1">
+
+    <button onclick="myFunction(16);" class="button-55 in " id ="bots14" >select</button>
+    <div id="myDropdown16" class="dropdown-content">
+     <input type="text" placeholder="Search.." id="myInput4" class = "inputs" onkeyup="filterFunction('myInput16','myDropdown16')">
+     <a class="button-55 in " href="#support" onclick="showDrop('myDropdown17');crearuwu(0,'17',false,14);" >Masa</a>
+     <a class="button-55 in " href="#support" onclick="showDrop('myDropdown17');crearuwu(1,'17',false,14);" >mol</a>
+     <a class="button-55 in " href="#support" onclick="showDrop('myDropdown17');crearuwu(2,'17',false,14);">Longitud</a>
+     <a class="button-55 in " href="#support" onclick="showDrop('myDropdown17');crearuwu(3,'17',false,14);">Volumen</a>
+     <a class="button-55 in " href="#support" onclick="showDrop('myDropdown17');crearuwu(4,'17',false,14);">Presion</a>
+     <a class="button-55 in " href="#support" onclick="showDrop('myDropdown17');crearuwu(5,'17',false,14);">TemperaturaIntervalo</a>
+     <a class="button-55 in " href="#support" onclick="showDrop('myDropdown17');crearuwu(6,'17',false,14);">ViscosidaDinamica</a>
+     <a class="button-55 in " href="#support" onclick="showDrop('myDropdown17');crearuwu(7,'17',false,14);">ViscosidadCinematica</a>
+     <a class="button-55 in " href="#support" onclick="showDrop('myDropdown17');crearuwu(8,'17',false,14);">FUERZAS</a>
+     <a class="button-55 in " href="#support" onclick="showDrop('myDropdown17');crearuwu(9,'17',false,14);">Fuerzas2</a>
+     <a class="button-55 in " href="#support" onclick="showDrop('myDropdown17');crearuwu(10,'17',false,14);">Energia</a>
+     <a class="button-55 in " href="#support" onclick="showDrop('myDropdown17');crearuwu(11,'17',false,14);">Energia2</a>
+     <a class="button-55 in " href="#support" onclick="showDrop('myDropdown17');crearuwu(12,'17',false,14);">Potencia</a>
+
+    </div>
+
+    <div id="myDropdown17" class="dropdown2-content" style="left : 160px" >
+
+    </div>
+
+    <div id="myDropdown18" class="dropdown2-content" style="left : 320px" >
+
+    </div>
+    </div>
+</div>
+
+
+<div class="col " id = "nox3" style="display: none" >
+        <div class="dropdown1">
+
+      <button onclick="myFunction(19);" class="button-55 in " id ="bots19" >select</button>
+      <div id="myDropdown19" class="dropdown-content"  style="z-index:2" >
+      <input type="text" placeholder="Search.." id="myInput19" class = "inputs" onkeyup="filterFunction('myInput19','myDropdown19')">
+      <a class="button-55 in " href="#about" onclick="showDrop('myDropdown20');crearuwu(0,'20',true,19);" >Masa</a>
+      <a class="button-55 in " href="#boton" onclick="showDrop('myDropdown20');crearuwu(1,'20',true,19);" >mol</a>
+      <a class="button-55 in " href="#blog" onclick="showDrop('myDropdown20');crearuwu(2,'20',true,19);">Longitud</a>
+      <a class="button-55 in " href="#contact" onclick="showDrop('myDropdown20');crearuwu(3,'20',true,19);">Volumen</a>
+      <a class="button-55 in " href="#custom" onclick="showDrop('myDropdown20');crearuwu(4,'20',true,19);">Presion</a>
+      <a class="button-55 in " href="#support" onclick="showDrop('myDropdown20');crearuwu(5,'20',true,19);">TemperaturaIntervalo</a>
+      <a class="button-55 in " href="#support" onclick="showDrop('myDropdown20');crearuwu(6,'20',true,19);">ViscosidaDinamica</a>
+      <a class="button-55 in " href="#support" onclick="showDrop('myDropdown20');crearuwu(7,'20',true,19);">ViscosidadCinematica</a>
+      <a class="button-55 in " href="#support" onclick="showDrop('myDropdown20');crearuwu(8,'20',true,19);">FUERZAS</a>
+      <a class="button-55 in " href="#support" onclick="showDrop('myDropdown20');crearuwu(9,'20',true,19);">Fuerzas2</a>
+      <a class="button-55 in " href="#support" onclick="showDrop('myDropdown20');crearuwu(10,'20',true,19);">Energia</a>
+      <a class="button-55 in " href="#support" onclick="showDrop('myDropdown20');crearuwu(11,'20',true,19);">Energia2</a>
+      <a class="button-55 in " href="#support" onclick="showDrop('myDropdown20');crearuwu(12,'20',true,19);">Potencia</a>
+
+
+      </div>
+
+      <div id="myDropdown20" class="dropdown2-content" style="left : 160px" >
+
+      </div>
+
+      <div id="myDropdown21" class="dropdown2-content" style="left : 320px" >
+
+      </div>
+      </div>
+      <div class = liears> </div>
+      <div class="dropdown1">
+
+      <button onclick="myFunction(22);" class="button-55 in " id ="bots20" >select</button>
+      <div id="myDropdown22" class="dropdown-content">
+       <input type="text" placeholder="Search.." id="myInput4" class = "inputs" onkeyup="filterFunction('myInput22','myDropdown22')">
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown23');crearuwu(0,'23',false,20);" >Masa</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown23');crearuwu(1,'23',false,20);" >mol</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown23');crearuwu(2,'23',false,20);">Longitud</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown23');crearuwu(3,'23',false,20);">Volumen</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown23');crearuwu(4,'23',false,20);">Presion</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown23');crearuwu(5,'23',false,20);">TemperaturaIntervalo</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown23');crearuwu(6,'23',false,20);">ViscosidaDinamica</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown23');crearuwu(7,'23',false,20);">ViscosidadCinematica</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown23');crearuwu(8,'23',false,20);">FUERZAS</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown23');crearuwu(9,'23',false,20);">Fuerzas2</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown23');crearuwu(10,'23',false,20);">Energia</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown23');crearuwu(11,'23',false,20);">Energia2</a>
+       <a class="button-55 in " href="#support" onclick="showDrop('myDropdown23');crearuwu(12,'23',false,20);">Potencia</a>
+
+      </div>
+
+      <div id="myDropdown23" class="dropdown2-content" style="left : 160px" >
+
+      </div>
+
+      <div id="myDropdown24" class="dropdown2-content" style="left : 320px" >
+
+      </div>
+      </div>
+</div>
+
+<div class="col " id = "nox4" style="display: none" >
+  <div class="dropdown1">
+
+         <button onclick="myFunction(25);" class="button-55 in " id ="bots25" >select</button>
+         <div id="myDropdown25" class="dropdown-content"  style="z-index:2" >
+         <input type="text" placeholder="Search.." id="myInput25" class = "inputs" onkeyup="filterFunction('myInput25','myDropdown25')">
+         <a class="button-55 in " href="#about" onclick="showDrop('myDropdown26');crearuwu(0,'26',true,25);" >Masa</a>
+         <a class="button-55 in " href="#boton" onclick="showDrop('myDropdown26');crearuwu(1,'26',true,25);" >mol</a>
+         <a class="button-55 in " href="#blog" onclick="showDrop('myDropdown26');crearuwu(2,'26',true,25);">Longitud</a>
+         <a class="button-55 in " href="#contact" onclick="showDrop('myDropdown26');crearuwu(3,'26',true,25);">Volumen</a>
+         <a class="button-55 in " href="#custom" onclick="showDrop('myDropdown26');crearuwu(4,'26',true,25);">Presion</a>
+         <a class="button-55 in " href="#support" onclick="showDrop('myDropdown26');crearuwu(5,'26',true,25);">TemperaturaIntervalo</a>
+         <a class="button-55 in " href="#support" onclick="showDrop('myDropdown26');crearuwu(6,'26',true,25);">ViscosidaDinamica</a>
+         <a class="button-55 in " href="#support" onclick="showDrop('myDropdown26');crearuwu(7,'26',true,25);">ViscosidadCinematica</a>
+         <a class="button-55 in " href="#support" onclick="showDrop('myDropdown26');crearuwu(8,'26',true,25);">FUERZAS</a>
+         <a class="button-55 in " href="#support" onclick="showDrop('myDropdown26');crearuwu(9,'26',true,25);">Fuerzas2</a>
+         <a class="button-55 in " href="#support" onclick="showDrop('myDropdown26');crearuwu(10,'26',true,25);">Energia</a>
+         <a class="button-55 in " href="#support" onclick="showDrop('myDropdown26');crearuwu(11,'26',true,25);">Energia2</a>
+         <a class="button-55 in " href="#support" onclick="showDrop('myDropdown26');crearuwu(12,'26',true,25);">Potencia</a>
+
+
+         </div>
+
+         <div id="myDropdown26" class="dropdown2-content" style="left : 160px" >
+
+         </div>
+
+         <div id="myDropdown27" class="dropdown2-content" style="left : 320px" >
+
+         </div>
+         </div>
+         <div class = liears> </div>
+         <div class="dropdown1">
+
+         <button onclick="myFunction(28);" class="button-55 in " id ="bots26" >select</button>
+         <div id="myDropdown28" class="dropdown-content">
+          <input type="text" placeholder="Search.." id="myInput4" class = "inputs" onkeyup="filterFunction('myInput28','myDropdown28')">
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown29');crearuwu(0,'29',false,26);" >Masa</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown29');crearuwu(1,'29',false,26);" >mol</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown29');crearuwu(2,'29',false,26);">Longitud</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown29');crearuwu(3,'29',false,26);">Volumen</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown29');crearuwu(4,'29',false,26);">Presion</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown29');crearuwu(5,'29',false,26);">TemperaturaIntervalo</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown29');crearuwu(6,'29',false,26);">ViscosidaDinamica</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown29');crearuwu(7,'29',false,26);">ViscosidadCinematica</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown29');crearuwu(8,'29',false,26);">FUERZAS</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown29');crearuwu(9,'29',false,26);">Fuerzas2</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown29');crearuwu(10,'29',false,26);">Energia</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown29');crearuwu(11,'29',false,26);">Energia2</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown29');crearuwu(12,'29',false,26);">Potencia</a>
+
+         </div>
+
+         <div id="myDropdown29" class="dropdown2-content" style="left : 160px" >
+
+         </div>
+
+         <div id="myDropdown30" class="dropdown2-content" style="left : 320px" >
+
+         </div>
+         </div>
+</div>
+
+<div class="col " id = "nox5" style="display: none" >
+
+          <div class="dropdown1">
+
+          <button onclick="myFunction(31);" class="button-55 in " id ="bots31" >select</button>
+          <div id="myDropdown31" class="dropdown-content"  style="z-index:2" >
+          <input type="text" placeholder="Search.." id="myInput31" class = "inputs" onkeyup="filterFunction('myInput31','myDropdown31')">
+          <a class="button-55 in" href="#about" onclick="showDrop('myDropdown32');crearuwu(0,'32',true,31);">Masa</a>
+          <a class="button-55 in " href="#boton" onclick="showDrop('myDropdown32');crearuwu(1,'32',true,31);" >mol</a>
+          <a class="button-55 in " href="#blog" onclick="showDrop('myDropdown32');crearuwu(2,'32',true,31);">Longitud</a>
+          <a class="button-55 in " href="#contact" onclick="showDrop('myDropdown32');crearuwu(3,'32',true,31);">Volumen</a>
+          <a class="button-55 in " href="#custom" onclick="showDrop('myDropdown32');crearuwu(4,'32',true,31);">Presion</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown32');crearuwu(5,'32',true,31);">TemperaturaIntervalo</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown32');crearuwu(6,'32',true,31);">ViscosidaDinamica</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown32');crearuwu(7,'32',true,31);">ViscosidadCinematica</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown32');crearuwu(8,'32',true,31);">FUERZAS</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown32');crearuwu(9,'32',true,31);">Fuerzas2</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown32');crearuwu(10,'32',true,31);">Energia</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown32');crearuwu(11,'32',true,31);">Energia2</a>
+          <a class="button-55 in " href="#support" onclick="showDrop('myDropdown32');crearuwu(12,'32',true,31);">Potencia</a>
+
+
+          </div>
+
+          <div id="myDropdown32" class="dropdown2-content" style="left : 160px" >
+
+          </div>
+
+          <div id="myDropdown33" class="dropdown2-content" style="left : 320px" >
+
+          </div>
+          </div>
+          <div class = liears> </div>
+          <div class="dropdown1">
+
+          <button onclick="myFunction(34);" class="button-55 in " id ="bots32" >select</button>
+          <div id="myDropdown34" class="dropdown-content">
+           <input type="text" placeholder="Search.." id="myInput4" class = "inputs" onkeyup="filterFunction('myInput34','myDropdown34')">
+           <a class="button-55 in " href="#support" onclick="showDrop('myDropdown35');crearuwu(0,'35',false,32);" >Masa</a>
+           <a class="button-55 in " href="#support" onclick="showDrop('myDropdown35');crearuwu(1,'35',false,32);" >mol</a>
+           <a class="button-55 in " href="#support" onclick="showDrop('myDropdown35');crearuwu(2,'35',false,32);">Longitud</a>
+           <a class="button-55 in " href="#support" onclick="showDrop('myDropdown35');crearuwu(3,'35',false,32);">Volumen</a>
+           <a class="button-55 in " href="#support" onclick="showDrop('myDropdown35');crearuwu(4,'35',false,32);">Presion</a>
+           <a class="button-55 in " href="#support" onclick="showDrop('myDropdown35');crearuwu(5,'35',false,32);">TemperaturaIntervalo</a>
+           <a class="button-55 in " href="#support" onclick="showDrop('myDropdown35');crearuwu(6,'35',false,32);">ViscosidaDinamica</a>
+           <a class="button-55 in " href="#support" onclick="showDrop('myDropdown35');crearuwu(7,'35',false,32);">ViscosidadCinematica</a>
+           <a class="button-55 in " href="#support" onclick="showDrop('myDropdown35');crearuwu(8,'35',false,32);">FUERZAS</a>
+           <a class="button-55 in " href="#support" onclick="showDrop('myDropdown35');crearuwu(9,'35',false,32);">Fuerzas2</a>
+           <a class="button-55 in " href="#support" onclick="showDrop('myDropdown35');crearuwu(10,'35',false,32);">Energia</a>
+           <a class="button-55 in " href="#support" onclick="showDrop('myDropdown35');crearuwu(11,'35',false,32);">Energia2</a>
+           <a class="button-55 in " href="#support" onclick="showDrop('myDropdown35');crearuwu(12,'35',false,32);">Potencia</a>
+
+          </div>
+
+          <div id="myDropdown35" class="dropdown2-content" style="left : 160px" >
+
+          </div>
+
+          <div id="myDropdown36" class="dropdown2-content" style="left : 320px" >
+
+          </div>
+          </div>
+</div>
+
+<div class="col hola" id="esd0" >
+  <a class="btn btn-dark btn-lg" onclick="escon('nox');escon('esd0');escon('esd');captutar();"  role="button"  > agregar </a>
+</div>
+
+<div class="col hola" id="esd" style="display: none">
+  <a class="btn btn-dark btn-lg" onclick="escon('nox1');escon('esd2');escon('esd');"  role="button"  > agregar </a>
+</div>
+
+<div class="col hola" id="esd2" style="display: none" >
+  <a class="btn btn-dark btn-lg" onclick="escon('nox2');escon('esd3');escon('esd2');"  role="button"  > agregar </a>
+</div>
+
+<div class="col hola" id="esd3"  style="display: none">
+  <a class="btn btn-dark btn-lg" onclick="escon('nox3');escon('esd4');escon('esd3');"  role="button"  > agregar </a>
+</div>
+
+<div class="col hola" id="esd4" style="display: none">
+  <a class="btn btn-dark btn-lg" onclick="escon('nox4');escon('esd5');escon('esd4');"  role="button"  > agregar </a>
+</div>
+
+<div class="col hola" id="esd5" style="display: none">
+  <a class="btn btn-dark btn-lg" onclick="escon('nox5');escon('esd5')"  role="button"  > agregar </a>
+</div>
+
+
+</div>
+
+
+
+<div class="grid " id="result" style="width: 30vw;height: 30vw;--bs-columns: 12;">
+
+  <div class="g-col-2 " style="display: inline-block;" >
+<p class="hit-the-floor centrar opa " style="font-size:2vw;text-align: right;">0</p>
+    <p class="hit-the-floor centrar " id="demo9" style="font-size:6vw;text-align: right;">0</p>
+<p class="hit-the-floor centrar opa " id="demo14" style="font-size:2vw;text-align: right;">0</p>
+      </div>
+
+  <div class="g-col-3" style="display: inline-block;">
+
+        <p class="hit-the-floor" id="demo10" style="font-size:6vw;">1</p>
+      <div class = liears id="demo20"> </div>
+        <p class="hit-the-floor" id="demo11" style="font-size:6vw;">1</p>
+
+    </div>
+
+    <div class="g-col-2" style="display: inline-block;">
+
+      <div  style="padding-top:30px;font-size:6vw;"> --> </div>
+      </div>
+
+
+  <div class="g-col-2 " style="display: inline-block;">
+
+    <p class="hit-the-floor centrar opa "  style="font-size:4vw;text-align: right;" >0</p>
+      <p class="hit-the-floor centrar " id="demo6" style="font-size:6vw;text-align: right;" >0</p>
+      <p class="hit-the-floor centrar opa "   id="demo12" style="font-size:2vw;text-align: right;" >0</p>
+
+
+
+      </div>
+
+  <div class="g-col-3" id="bajar" style="display: inline-block;">
+
+        <p class="hit-the-floor" id="demo7" style="font-size:4vw">1</p>
+      <div class = liears id=demo21> </div>
+        <p class="hit-the-floor" id="demo8" style="font-size:4vw;">1</p>
+
+      </div>
+</div>
+
+<script>
+
+  var total = 0;
+  var unitsup = "";
+  var unitsbot = "";
+  var unitsupBefore = "";
+  var unitbotBefore = "";
+  document.getElementById("result").style.display = "none";
+  document.getElementById("demo10").style.display = "none";
+  document.getElementById("demo20").style.display = "none";
+  document.getElementById("demo11").style.display = "none";
+  document.getElementById("demo7").style.display = "none";
+  document.getElementById("demo21").style.display = "none";
+  document.getElementById("demo8").style.display = "none";
+
+
+  const maxList = [
+[['-MASA', 'kg', 'g', 'mg', 'TonL.', 'TonC.', 'Ton', 'Stone', 'lb', 'onza'], ['kg', '1', '1000', '10**6', '0.000984', '0.0011', '0.001', '0.1575', '2.2046', '35.274'], ['g', '0.001', '1', '1000', '9.84*10**-7', '1.10*10**-6', '10**-6', '0.000157', '0.0022', '0.03527'], ['mg', '10**-6', '0.001', '1', '9.84*10**-10', '1.10*10**-9', '10**-9', '1.58*10**-7', '2.2*10**-6', '3.5*10**-5'], ['TonL.', '1016.05', '1.016*10**6', '1.016*10**9', '1', '1.12', '1.016', '160', '2240', '35840'], ['TonC.', '907.185', '907185', '9.07*10**8', '0.8929', '1', '0.9072', '142.857', '2000', '32000'], ['Ton', '1000', '106', '109', '0.9842', '1.1023', '1', '157.473', '2204.62', '35274'], ['Stone', '6.3503', '6350.29', '6.35*10**6', '0.00625', '0.007', '0.0064', '1', '14', '224'], ['lb', '0.4536', '453.593', '453592', '0.000446', '0.0005', '0.00045', '0.07143', '1', '16'], ['onza', '0.02835', '28.3495', '28349.5', '2.79*10**-5', '3.12*10**-5', '2.8*10**-5', '0.004464', '0.0625', '1']]
+,[['-mol', 'kmol', 'mol', 'mmol', 'TonLMol', 'TonCMol', 'TonMol', 'StoneMol', 'lbMol', 'OnzaMol'], ['kmol', '1', '1000', '10**6', '0.000984', '0.0011', '0.001', '0.1575', '2.2046', '35.274'], ['mol', '0.001', '1', '1000', '9.84', '*', '10**-7', '1.10*10**-6', '10**-6', '0.000157', '0.0022', '0.03527'], ['mmol', '10**-6', '0.001', '1', '9.84*10-10', '1.10*10**-9', '10**-9', '1.58*10**-7', '2.2*10**-6', '3.5*10**-5'], ['TonLMol', '1016.05', '1.016*10**6', '1.016*10**9', '1', '1.12', '1.016', '160', '2240', '35840'], ['TonCMol', '907.185', '907185', '9.07*10**8', '0.8929', '1', '0.9072', '142.857', '2000', '32000'], ['TonMol', '1000', '10**6', '109', '0.9842', '1.1023', '1', '157.473', '2204.62', '35274'], ['StoneMol', '6.3503', '6350.29', '6.35*10**6', '0.00625', '0.007', '0.0064', '1', '14', '224'], ['lbMol', '0.4536', '453.593', '453592', '0.000446', '0.0005', '0.00045', '0.07143', '1', '16'], ['OnzaMol', '0.02835', '28.3495', '28349.5', '2.79*10**-5', '3.12', '*', '10**-5', '2.8*10**-5', '0.004464', '0.0625', '1']] ,
+[['Longitud', 'm', 'cm', 'mm', 'micra', 'pulg', 'pie'], ['m', '1', '100', '1000', '10**6', '39.37', '3.28'], ['cm', '0.01', '1', '10', '10.000', '0.3937', '0.0328'], ['mm', '0.001', '0.1', '1', '1.000', '0.03937', '0.00328'], ['micra', '10**-6', '10**-4', '0.001', '1', '3.937*10**-5', '3.28*10**-6'], ['pulg', '0.0254', '2.54', '25.4', '25.400', '1', '0.08333'], ['pie', '0.3048', '30.48', '304.8', '304.800', '12', '1']]
+,[['-Volumen', 'm3', 'cm3', 'L', 'gal(US)', 'pulg3', 'pie3'], ['m3', '1', '10**6', '10**3', '264.172', '61.023.7', '35.31'], ['cm3', '10**-6', '1', '0.001', '0.000264', '0.0610', '3.531*10**-5'], ['L', '0.001', '1000', '1', '0.2642', '61.024', '0.03531'], ['gal(US)', '0.003785', '3785.4', '3.785', '1', '231', '0.1337'], ['pulg3', '1.6387*10**-5', '16.387', '0.016387', '0.004329', '1', '0.0005787'], ['pie3', '0.02832', '28.316.8', '28.317', '7.4805', '1728', '1']]
+,[['Presión', 'atm', 'bar', 'lbf/pulg2', 'pa', 'psi', 'torr'], ['atm', '1', '1.01325', '14.696', '101325', '14.696', '760'], ['bar', '0.9869', '1', '14.5038', '100000', '14.5038', '750.062'], ['lbf/pulg2', '0.068', '0.0689', '1', '6894.76', '1', '51.7149'], ['pa', '9.87*10**-6', '10-5', '0.000145', '1', '0.000145', '0.0075'], ['psi', '0.068', '0.0689', '1', '6894.76', '1', '51.7149'], ['torr', '0.00132', '0.001333', '0.01934', '133.322', '0.01934', '1']]
+,[['-Presión', 'pa', 'kg/(mS2)', 'dina/cm2', 'mm', 'Hg', 'lbf/pulg2'], ['pa', '1', '1', '10', '0.0075', '0.000145'], ['kg/(mS2)', '1', '1', '10', '0.0075', '0.000145'], ['dina/cm2', '0.1', '0.1', '1', '0.000750', '0.0000145'], ['mm', 'Hg', '133.322', '133.322', '1333.22', '1', '0.01934'], ['lbf/pulg2', '6894.77', '6894.77', '68947.573', '51.715', '1']]
+,[['TEMPERATURAintervalo', 'C', 'K', 'F', 'R'], ['C', '1', '1', '1.8', '1.8'], ['K', '1', '1', '1.8', '1.8'], ['F', '5/9', '5/9', '1', '1'], ['R', '5/9', '5/9', '1', '1']]
+,[['VISCOSIDADdinamica', 'poise', 'cp', '(dina-seg)/cm2', 'g/(cm-s)', 'slug/(pie-s)', '(lbf-s)/pie2'], ['poise', '1', '100', '1', '1', '2.09*10**-21', '2.09*10**-21'], ['cp', '0.01', '1', '0.01', '0.01', '0.0000209', '0.0000209'], ['(dina-seg)/cm2', '1', '100', '1', '1', '0.00209', '0.00209'], ['g/(cm-s)', '1', '100', '1', '1', '0.00209', '0.00209'], ['slug/(pie-s)', '478.8', '47880.3', '478.8', '478.8', '1', '1'], ['(lbf-s)/pie2', '478.8', '47880.3', '478.8', '478.8', '1', '1']]
+,[['-VISCOSIDADcinematica', 'stoke', 'cm2/s', 'm2/s', 'dina/poise'], ['stoke', '1', '1', '0.0001', '1'], ['cm2/s', '1', '1', '0.0001', '1'], ['m2/s', '10000', '10000', '1', '100000'], ['dina/poise', '1', '1', '0.0001', '1']]
+,[['FUERZAS', 'dina', 'N', 'poundal', 'lbf', '(lb-ft)/s2', 'kgf'], ['dina', '1', '0.00001', '0.0000723', '0.0000023', '0.0000723', '0.00000102'], ['N', '10**5', '1', '7.233', '0.2248', '7.233', '0.10197'], ['poundal', '13.825.5', '0.13825', '1', '0.03108', '1', '0.014098'], ['lbf', '444822.2', '4.44822', '32.174', '1', '32.174', '0.45359'], ['(lb-ft)/s2', '13825.5', '0.13825', '1', '0.03108', '1', '0.014098'], ['kgf', '980665', '9.80665', '70.9316', '2.20462', '70.9316', '1']]
+,[['-FUERZAS', 'dina', '(g-cm)/s2', 'N', '(kg-m)/s2', '(lb-ft)/s2', 'kgf'], ['dina', '1', '1', '10**−5', '10**−5', '0.0000723', '0.00000102'], ['g-cm)/s2', '1', '1', '10**−5', '10**−5', '0.0000723', '0.00000102'], ['N', '10**5', '10**5', '1', '1', '7.233', '0.102'], ['(kg-m)/s2', '10**−5', '10**−5', '1', '1', '7.233', '0.102'], ['(lb-ft)/s2', '13825.5', '13825.5', '0.138255', '0.138255', '1', '0.014098'], ['kgf', '980665', '980665', '9.80665', '9.80665', '70.9316', '1']]
+,[['ENERGIA', 'J', 'kcal', 'kW-h', 'btu', 'pie-lbf', 'N-m'], ['J', '1', '2.39*10**-4', '2.778*10**-7', '0.000948', '0.73756', '1'], ['kcal', '4184', '1', '0.001162', '3.9657', '3085.96', '4184'], ['kw-h', '3.6*10**6', '860.42', '1', '3412.14', '2.655*10**6', '3.6', '*', '10**6'], ['btu', '1055.057', '0.2522', '0.000293', '1', '778.169', '1055.057'], ['pie-lbf', '1.35582', '0.000324', '3.766*10**-7', '0.001285', '1', '1.35582'], ['N-m', '1', '0.239', '2.778*10**-7', '0.000948', '0.73756', '1']]
+,[['-ENERGIA', 'J', 'kgf-m', 'L-atm', 'HP-h', 'Pa-m3', 'erg'], ['J', '1', '0.102', '0.009869', '3.725*10**-7', '1', '10**7'], ['kgf-m', '9.8066', '1', '0.09678', '3.704*10**-6', '9.8066', '9.8066*10**7'], ['L-atm', '101.3', '10.332', '1', '3.77*10**-5', '101.3', '1.013*10**9'], ['HP-h', '2.685*10**6', '273744.8', '26525.2', '1', '2.685*10**6', '2.685*10**13'], ['Pa-m3', '1', '0.102', '0.009869', '3.725*10**-7', '1', '10**7'], ['erg', '1*10**-7', '1.02*10**-8', '9.87*10**-10', '3.72*10**-14', '1*10**-7', '1']]
+,[['POTENCIA', 'HP', 'J/s', 'W', 'Btu/h', '(lbf-ft)/s', '(kg-m2)/s3'], ['HP', '1', '745.7', '745.7', '2545', '550', '745.7'], ['J/s', '0.001341', '1', '1', '3.4121', '0.737562', '1'], ['W', '0.001341', '1', '1', '3.4121', '0.737562', '1'], ['Btu/h', '3.929*10**-4', '0.293124', '0.293124', '1', '0.21611', '0.293124'], ['(lbf-ft)/s', '1.818*10**-3', '1.3564', '1.3564', '4.6273', '1', '1.3564'], ['(kg-m2)/s3', '0.001341', '1', '1', '3.4121', '0.737562', '1']]
+
+
+
+ ]
+
+console.log(maxList[0][0][1]);
+
+function captutar() {
+  total = total + eval(document.getElementById('demo4').value)
+}
+
+  function myFunction(number) {
+
+        document.getElementById("myDropdown"+number).classList.toggle("show");
+
+}
+
+  function showDrop(drop1) {
+    document.getElementById(drop1).classList.toggle("show");
+
+  }
+
+  function myFunction2(value5) {
+
+    var value2 = eval(value5) -1
+      document.getElementById("myDropdown"+eval(value2)).classList.toggle("show");
+      document.getElementById("myDropdown"+eval(value2+1)).classList.toggle("show");
+    	document.getElementById("myDropdown"+eval(value2+2)).classList.toggle("show");
+
+
+    }
+
+
+  function filterFunction(intp,drop) {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById(intp);
+    filter = input.value.toUpperCase();
+    div = document.getElementById(drop);
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+      txtValue = a[i].textContent || a[i].innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        a[i].style.display = "";
+      } else {
+        a[i].style.display = "none";
+      }
+    }
+  }
+
+  function addvalue(value1,value2,value3,value4,pos){
+
+    const listaa = maxList[pos]
+    if (value3) {
+
+    var cantidad = eval(listaa[value1][value2])
+    total = eval(total) * cantidad
+    if (total > 10000 || total < (1/10000) ){
+      document.getElementById("demo6").innerHTML = total.toExponential().replace(/e\+?/, ' x 10^');
+      document.getElementById("bots"+value4).innerHTML = listaa[0][value1] + "->"+listaa[0][value2] ;
+      unitsup = unitsup + " "+listaa[0][value2] +" ";
+      document.getElementById("demo7").innerHTML = unitsup;
+
+
+    }else {
+      document.getElementById("demo6").innerHTML = total;
+      document.getElementById("bots"+value4).innerHTML = listaa[0][value1] + "->"+listaa[0][value2] ;
+      unitsup = unitsup + " "+listaa[0][value2] +" ";
+      document.getElementById("demo7").innerHTML = unitsup;
+
+    }
+    document.getElementById("demo9").innerHTML = eval(document.getElementById('demo4').value);
+    unitsupBefore = unitsupBefore + " "+listaa[0][value1] +" ";
+    document.getElementById("demo10").innerHTML = unitsupBefore;
+
+  }else {
+
+    var cantidad = eval(listaa[value1][value2])
+    total = eval(total) / cantidad
+    if (total > 10000 || total < (1/10000) ){
+      document.getElementById("demo6").innerHTML = total.toExponential().replace(/e\+?/, ' x 10^');
+      document.getElementById("bots"+value4).innerHTML = listaa[0][value1] + "->"+listaa[0][value2] ;
+      unitsbot = unitsbot + listaa[0][value2] + " ";
+      document.getElementById("demo8").innerHTML = unitsbot;
+
+
+
+  }else {
+    document.getElementById("demo6").innerHTML = total;
+    document.getElementById("bots"+value4).innerHTML = listaa[0][value1] + "->"+listaa[0][value2] ;
+    unitsbot = unitsbot + listaa[0][value2] + " ";
+    document.getElementById("demo8").innerHTML = unitsbot;
+
+  }
+  document.getElementById("demo9").innerHTML = eval(document.getElementById('demo4').value);
+  unitbotBefore = unitbotBefore + " "+listaa[0][value1] +" ";
+  document.getElementById("demo11").innerHTML = unitbotBefore;
+  document.getElementById("bajar").style.padding = "50px 50px 75px 0px";
+  }
+
+
+
+
+  }
+
+  function get1(){
+  	str1=document.getElementById('data').value;
+      document.getElementById('demo3').innerHTML = str1;
+
+
+      document.getElementById('demo5').innerHTML = (eval(document.getElementById('demo4').value) * document.getElementById('data').value ) ;
+
+  }
+
+  function escon(clas1){
+    var x = document.getElementById(clas1)
+      if (x.style.display === "none"){
+        x.style.display = "block";
+      }
+      else {
+        x.style.display = "none"
+      }
+    }
+
+    function crearuwu(pos,nume,value3,value4) {
+    var num23 = eval(nume)+1
+    const lista = maxList[pos]
+
+    var dipArea = `
+        <input type="text" placeholder="Search.." id="myInput`+nume+`" class = "inputs" onkeyup="filterFunction('myInput`+nume+`','myDropdown`+nume+`')">
+    `
+
+        for (var i = 1; i < lista[0].length; i++) {
+          dipArea = dipArea + `<a class="button-85"  onclick="showDrop('myDropdown`+num23+`');crearuwu1(`+pos+`,`+num23+`,`+i+`,`+value3+`,`+value4+`,`+nume+`);">` + lista[0][i] + i +`</a>`
+          document.getElementById('myDropdown' + nume).innerHTML = dipArea ;
+        }
+
+      }
+
+    function crearuwu1(pos,nume,nume2,value3,value4,value5) {
+
+    var num23 = eval(nume)
+    const lista = maxList[pos]
+    var dipArea2 = `
+        <input type="text" placeholder="Search.." id="myInput`+nume+`" class = "inputs" onkeyup="filterFunction('myInput`+nume+`','myDropdown`+nume+`')">
+    `
+
+        for (var i = 1; i < lista[0].length; i++) {
+          dipArea2 = dipArea2 + `<a class="button-85" href="#about" onclick="myFunction2(`+value5+`);addvalue(`+nume2+`,`+i+`,`+value3+`,`+value4+`,`+pos+`);mostrar(`+value3+`)">` + lista[0][i] + nume2 +`</a>`
+          document.getElementById('myDropdown' + nume).innerHTML = dipArea2 ;
+
+      }
+
+
+    }
+
+function mostrar(value3){
+  document.getElementById("result").style.display = "inline"
+  if (value3){
+  var x = document.getElementById("demo10");
+    if (x.style.display === "none"){
+      x.style.display = "inline";
+      document.getElementById("demo7").style.display = "inline";
+      document.getElementById("demo12").style.display = "none";
+      document.getElementById("demo14").style.display = "none";
+    }
+
+
+  }else {
+    var x = document.getElementById("demo11");
+      if (x.style.display === "none"){
+        x.style.display = "block";
+        document.getElementById("demo20").style.display = "block";
+        document.getElementById("demo21").style.display = "block";
+        document.getElementById("demo8").style.display = "block";
+        document.getElementById("demo12").style.display = "block";
+        document.getElementById("demo14").style.display = "block";
+    }
+
+  }
+}
+
+
+
+
+</script>
+
+</body>
+
+</html>
